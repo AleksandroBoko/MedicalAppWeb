@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MedicalModelStoreContainer" CdmEntityContainer="MedicalEntities">
+    <EntitySetMapping Name="DoctorEntities">
+      <EntityTypeMapping TypeName="MedicalModel.DoctorEntity">
+        <MappingFragment StoreEntitySet="Doctor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicineEntities">
+      <EntityTypeMapping TypeName="MedicalModel.MedicineEntity">
+        <MappingFragment StoreEntitySet="Medicine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="MethodUsing" ColumnName="MethodUsing" />
+          <ScalarProperty Name="TypeMedicineId" ColumnName="TypeMedicineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationEntities">
+      <EntityTypeMapping TypeName="MedicalModel.OperationEntity">
+        <MappingFragment StoreEntitySet="Operation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeOperationId" ColumnName="TypeOperationId" />
+          <ScalarProperty Name="TreatmentId" ColumnName="TreatmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientEntities">
+      <EntityTypeMapping TypeName="MedicalModel.PatientEntity">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomEntities">
+      <EntityTypeMapping TypeName="MedicalModel.RoomEntity">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentEntities">
+      <EntityTypeMapping TypeName="MedicalModel.TreatmentEntity">
+        <MappingFragment StoreEntitySet="Treatment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentReportEntities">
+      <EntityTypeMapping TypeName="MedicalModel.TreatmentReportEntity">
+        <MappingFragment StoreEntitySet="TreatmentReport">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TreatmentId" ColumnName="TreatmentId" />
+          <ScalarProperty Name="Conclusion" ColumnName="Conclusion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeMedicineEntities">
+      <EntityTypeMapping TypeName="MedicalModel.TypeMedicineEntity">
+        <MappingFragment StoreEntitySet="TypeMedicine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOperationEntities">
+      <EntityTypeMapping TypeName="MedicalModel.TypeOperationEntity">
+        <MappingFragment StoreEntitySet="TypeOperation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="OperationMedicine" TypeName="MedicalModel.OperationMedicine" StoreEntitySet="OperationMedicine">
+      <EndProperty Name="Medicine">
+        <ScalarProperty Name="Id" ColumnName="MedicineId" />
+      </EndProperty>
+      <EndProperty Name="Operation">
+        <ScalarProperty Name="Id" ColumnName="OperationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TreatmentReportDetail" TypeName="MedicalModel.TreatmentReportDetail" StoreEntitySet="TreatmentReportDetail">
+      <EndProperty Name="Medicine">
+        <ScalarProperty Name="Id" ColumnName="MedicineId" />
+      </EndProperty>
+      <EndProperty Name="TreatmentReport">
+        <ScalarProperty Name="Id" ColumnName="TreatmentReportId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormDoctor</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("CreateDoctor", "Doctor", FormMethod.Post))
+        {
+            <p>@Html.Label("FirstName")</p>
+            <p>@Html.TextBox("FirstName", "Type Name")</p>
+            <p>@Html.Label("LastName")</p>
+            <p>@Html.TextBox("LastName", "Type Last Name")</p>
+            <p>@Html.Label("Qualification")</p>
+            <p>@Html.TextBox("Qualification", "Type Qualification")</p>
+            <p><input type="submit" value="Send" /></p>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.Domain\bin\Debug\MedicalApp.Domain.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.Domain\bin\Debug\MedicalApp.Domain.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.Domain\obj\Debug\MedicalApp.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.Domain\obj\Debug\MedicalApp.Domain.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.Domain\obj\Debug\MedicalApp.Domain.pdb

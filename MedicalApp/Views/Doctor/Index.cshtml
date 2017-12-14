@@ -1,0 +1,30 @@
+﻿@using MedicalApp.Domain.Models
+@model IList<Doctor>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div> 
+        <table>
+        @foreach(var doc in Model)
+        {
+            <tr>
+                <td>@doc.Id</td>
+                <td>@doc.FirstName</td>
+                <td>@doc.LastName</td>
+                <td>@doc.Qualification</td>
+            </tr>
+        }
+            </table>
+    </div>
+</body>
+</html>
