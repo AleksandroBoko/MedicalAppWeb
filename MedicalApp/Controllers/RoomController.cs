@@ -13,18 +13,18 @@ namespace MedicalApp.Controllers
     {
         public RoomController()
         {
-            service = new RoomService();
+            roomService = new RoomService();
         }
 
-        private readonly IRoomService service;
+        private readonly IRoomService roomService;
 
         // GET: Patient
         public ActionResult Index()
         {
-            var entities = service.GetAll();
-            if (entities != null && entities.Any())
+            var rooms = roomService.GetAll();
+            if (rooms != null && rooms.Any())
             {
-                return View(entities);
+                return View(rooms);
             }
             else
             {
@@ -40,8 +40,8 @@ namespace MedicalApp.Controllers
         [HttpPost]
         public ContentResult CreateRoom(Room room)
         {
-            service.Add(room);
-            service.Save();
+            roomService.Add(room);
+            roomService.Save();
             return Content("<p>The room was created successfully!</p>");
         }
 

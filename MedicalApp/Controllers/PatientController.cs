@@ -13,29 +13,26 @@ namespace MedicalApp.Controllers
     {
         public PatientController()
         {
-            service = new PatientService();
+            patientService = new PatientService();
+            roomService = new RoomService();
         }
 
-        private readonly IPatientService service;
+        private readonly IPatientService patientService;
+        private readonly IRoomService roomService;
 
         // GET: Patient
         public ActionResult Index()
         {
-            var entities = service.GetAll();
-            return View(entities);
-            //if (entities != null && entities.Any())
-            //{
-            //    return View(entities);
-            //}
-            //else
-            //{
-            //    return Content("<p>The list of patients is empty<p>");
-            //}
+            var patients = patientService.GetAll();
+            var rooms = roomService.GetAll();            
+            ViewBag.rooms = rooms;
+            
+            return View(patients);
         }
 
         public ActionResult FormPatient()
         {
-            var roomService = new RoomService();
+            
             var rooms = roomService.GetAll();
             var selectList = new SelectList(rooms, "Id", "Number", "Number");
             ViewBag.selectList = selectList;
@@ -46,8 +43,8 @@ namespace MedicalApp.Controllers
         [HttpPost]
         public ContentResult CreatePatient(Patient patient)
         {
-            service.Add(patient);
-            service.Save();
+            patientService.Add(patient);
+            patientService.Save();
             return Content("<p>The patient was created successfully!</p>");
         }
     }

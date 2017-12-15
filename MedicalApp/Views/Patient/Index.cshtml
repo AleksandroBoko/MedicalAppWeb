@@ -1,10 +1,30 @@
 ﻿@using MedicalApp.Domain.Models
 @model IList<Patient>
 
-<table>
+@helper GetRoomName(int id)
+{
+var rooms = ViewBag.rooms as List<Room>;
+if (rooms != null)
+{
+    var room = rooms.FirstOrDefault(x => x.Id == id);
+    if(room != null)
+    {
+            <td>@room.Number</td>
+    }
+}
+}
+
+<table border="1">
+    <caption>
+        Patients
+    </caption>
     <tr>
-        <th>Patients</th>
-    </tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Room number</th>
+    </tr>    
     @foreach (var entity in Model)
     {
         <tr>
@@ -12,7 +32,8 @@
             <td>@entity.FirstName</td>
             <td>@entity.LastName</td>
             <td>@entity.Age</td>
-            <td>@entity.RoomId</td>
+            @GetRoomName(entity.Id)
+
         </tr>
-    }
+                    }
 </table>

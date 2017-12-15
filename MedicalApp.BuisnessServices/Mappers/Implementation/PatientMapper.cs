@@ -28,6 +28,7 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
             {
                 targetItem.Id = item.Id;
                 targetItem.FirstName = item.FirstName;
+                targetItem.LastName = item.LastName;
                 targetItem.Age = item.Age;
                 targetItem.RoomId = item.RoomId;
             }

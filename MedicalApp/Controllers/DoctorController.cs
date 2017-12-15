@@ -14,16 +14,16 @@ namespace MedicalApp.Controllers
     {
         public DoctorController()
         {
-            service = new DoctorService();
+            doctorService = new DoctorService();
         }
 
-        private readonly IDoctorService service;
+        private readonly IDoctorService doctorService;
 
         // GET: Doctor
         public ActionResult Index()
         {
-            var entities = service.GetAll();
-            return View(entities);
+            var doctors = doctorService.GetAll();
+            return View(doctors);
         }
 
         public ActionResult FormDoctor()
@@ -34,8 +34,8 @@ namespace MedicalApp.Controllers
         [HttpPost]
         public ContentResult CreateDoctor(Doctor doctor)
         {
-            service.Add(doctor);
-            service.Save();
+            doctorService.Add(doctor);
+            doctorService.Save();
             return Content("<p>The doctor was created successfully!</p>");
         }
     }
