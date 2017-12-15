@@ -201,6 +201,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\TreatmentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,6 +277,8 @@
     <Content Include="Views\Patient\FormPatient.cshtml" />
     <Content Include="Views\Room\Index.cshtml" />
     <Content Include="Views\Room\FormRoom.cshtml" />
+    <Content Include="Views\Treatment\Index.cshtml" />
+    <Content Include="Views\Treatment\FormTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

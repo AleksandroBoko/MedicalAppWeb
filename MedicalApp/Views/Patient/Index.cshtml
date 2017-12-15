@@ -1,19 +1,6 @@
 ﻿@using MedicalApp.Domain.Models
 @model IList<Patient>
 
-@helper GetRoomName(int id)
-{
-var rooms = ViewBag.rooms as List<Room>;
-if (rooms != null)
-{
-    var room = rooms.FirstOrDefault(x => x.Id == id);
-    if(room != null)
-    {
-            <td>@room.Number</td>
-    }
-}
-}
-
 <table border="1">
     <caption>
         Patients
@@ -32,8 +19,7 @@ if (rooms != null)
             <td>@entity.FirstName</td>
             <td>@entity.LastName</td>
             <td>@entity.Age</td>
-            @GetRoomName(entity.Id)
-
+            <td>@entity.RoomId</td>
         </tr>
-                    }
+     }
 </table>
