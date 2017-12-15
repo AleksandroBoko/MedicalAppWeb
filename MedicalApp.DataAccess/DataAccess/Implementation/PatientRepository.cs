@@ -9,12 +9,31 @@ namespace MedicalApp.DataAccess.DataAccess.Implementation
 {
     public class PatientRepository:IRepository<PatientEntity>
     {
-        public PatientRepository()
+        private PatientRepository()
         {
             medicalEntity = MedicalEntities.GetInstance();
         }
 
+        private static PatientRepository instance;
+        private static object rootSync = new object();
+
         private readonly MedicalEntities medicalEntity;
+
+        public static IRepository<PatientEntity> GetInstance()
+        {
+            if (instance == null)
+            {
+                lock (rootSync)
+                {
+                    if (instance == null)
+                    {
+                        instance = new PatientRepository();
+                    }
+                }
+            }
+
+            return instance;
+        }
 
         public void Create(PatientEntity item)
         {

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MedicalApp.BuisnessServices.Mappers.Implementation
 {
-    class PatientMapper//IMapper<PatientEntity, Patient>
+    class PatientMapper:IMapper<Patient, PatientEntity>
     {
-        public void Map(PatientEntity item, Patient targetItem)
+        public void MapToEntity(Patient item, PatientEntity targetItem)
         {
             if (item != null && targetItem != null)
             {
@@ -18,6 +18,18 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
                 targetItem.FirstName = item.FirstName;
                 targetItem.LastName = item.LastName;
                 targetItem.Age = item.Age;
+                targetItem.RoomId = item.RoomId;
+            }
+        }
+
+        public void MapFromEntity(PatientEntity item, Patient targetItem)
+        {
+            if (item != null && targetItem != null)
+            {
+                targetItem.Id = item.Id;
+                targetItem.FirstName = item.FirstName;
+                targetItem.Age = item.Age;
+                targetItem.RoomId = item.RoomId;
             }
         }
     }

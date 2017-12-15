@@ -199,6 +199,8 @@
     <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,6 +272,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Doctor\Index.cshtml" />
     <Content Include="Views\Doctor\FormDoctor.cshtml" />
+    <Content Include="Views\Patient\Index.cshtml" />
+    <Content Include="Views\Patient\FormPatient.cshtml" />
+    <Content Include="Views\Room\Index.cshtml" />
+    <Content Include="Views\Room\FormRoom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

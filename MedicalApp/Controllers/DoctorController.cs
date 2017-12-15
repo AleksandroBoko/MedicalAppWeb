@@ -17,13 +17,13 @@ namespace MedicalApp.Controllers
             service = new DoctorService();
         }
 
-        private readonly IService<Doctor> service;
+        private readonly IDoctorService service;
 
         // GET: Doctor
         public ActionResult Index()
         {
-            var doctors = service.GetAll();
-            return View(doctors);
+            var entities = service.GetAll();
+            return View(entities);
         }
 
         public ActionResult FormDoctor()

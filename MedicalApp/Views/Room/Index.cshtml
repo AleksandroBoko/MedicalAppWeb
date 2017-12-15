@@ -1,0 +1,15 @@
+﻿@using MedicalApp.Domain.Models
+@model IList<Room>
+
+<table>
+    <tr>
+        <th>Rooms</th>
+    </tr>
+    @foreach (var entity in Model)
+    {
+        <tr>
+            <td>@entity.Id</td>
+            <td>@entity.Number</td>
+        </tr>
+    }
+</table>

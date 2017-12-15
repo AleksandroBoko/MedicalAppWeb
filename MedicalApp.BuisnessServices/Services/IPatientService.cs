@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MedicalApp.BuisnessServices.Services
 {
-    public interface IDoctorService:IService<Doctor>
+    public interface IPatientService:IService<Patient>
     {
 
     }

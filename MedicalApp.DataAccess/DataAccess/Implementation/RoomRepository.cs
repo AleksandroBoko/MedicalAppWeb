@@ -9,12 +9,31 @@ namespace MedicalApp.DataAccess.DataAccess.Implementation
 {
     public class RoomRepository:IRepository<RoomEntity>
     {
-        public RoomRepository()
+        private RoomRepository()
         {
             medicalEntity = MedicalEntities.GetInstance();
         }
 
+        private static RoomRepository instance;
+        private static object rootSync = new object();
+
         private readonly MedicalEntities medicalEntity;
+
+        public static IRepository<RoomEntity> GetInstance()
+        {
+            if (instance == null)
+            {
+                lock (rootSync)
+                {
+                    if (instance == null)
+                    {
+                        instance = new RoomRepository();
+                    }
+                }
+            }
+
+            return instance;
+        }
 
         public void Create(RoomEntity item)
         {

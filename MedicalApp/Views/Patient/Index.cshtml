@@ -1,9 +1,9 @@
 ﻿@using MedicalApp.Domain.Models
-@model IList<Doctor>
+@model IList<Patient>
 
 <table>
     <tr>
-        <th>Doctors</th>
+        <th>Patients</th>
     </tr>
     @foreach (var entity in Model)
     {
@@ -11,7 +11,8 @@
             <td>@entity.Id</td>
             <td>@entity.FirstName</td>
             <td>@entity.LastName</td>
-            <td>@entity.Qualification</td>
+            <td>@entity.Age</td>
+            <td>@entity.RoomId</td>
         </tr>
     }
 </table>
