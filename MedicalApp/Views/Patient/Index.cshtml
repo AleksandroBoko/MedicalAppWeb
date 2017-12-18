@@ -11,7 +11,7 @@
         <th>Last Name</th>
         <th>Age</th>
         <th>Room number</th>
-    </tr>    
+    </tr>
     @foreach (var entity in Model)
     {
         <tr>
@@ -19,7 +19,15 @@
             <td>@entity.FirstName</td>
             <td>@entity.LastName</td>
             <td>@entity.Age</td>
-            <td>@entity.RoomId</td>
+            <td>
+                @if (entity.Room != null)
+                {
+                    @entity.Room.Number;
+                }
+            </td>
         </tr>
-     }
+    }
 </table>
+<div >    
+    <input type="button" value="Add patient"/>
+</div>

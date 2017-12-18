@@ -8,17 +8,28 @@ using System.Threading.Tasks;
 
 namespace MedicalApp.BuisnessServices.Mappers.Implementation
 {
-    class PatientMapper:IMapper<Patient, PatientEntity>
+    class PatientMapper : IMapper<Patient, PatientEntity>
     {
-        public void MapToEntity(Patient item, PatientEntity targetItem)
+        public PatientMapper()
         {
-            if (item != null && targetItem != null)
+            roomMapper = new RoomMapper();
+        }
+
+        private readonly RoomMapper roomMapper;
+
+        public void MapToEntity(Patient patient, PatientEntity patientEntity)
+        {
+            if (patient != null && patientEntity != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.FirstName = item.FirstName;
-                targetItem.LastName = item.LastName;
-                targetItem.Age = item.Age;
-                targetItem.RoomId = item.RoomId;
+                patientEntity.Id = patient.Id;
+                patientEntity.FirstName = patient.FirstName;
+                patientEntity.LastName = patient.LastName;
+                patientEntity.Age = patient.Age;
+                if(patient.CurrentRoom != null)
+                {
+                    patientEntity.RoomId = patient.CurrentRoom.Id;
+                }                
+                roomMapper.MapToEntity(patient.CurrentRoom, patientEntity.Room);
             }
         }
 
@@ -30,7 +41,11 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
                 targetItem.FirstName = item.FirstName;
                 targetItem.LastName = item.LastName;
                 targetItem.Age = item.Age;
-                targetItem.RoomId = item.RoomId;
+                if (item.Room != null)
+                {
+                    targetItem.CurrentRoom = targetItem.CurrentRoom ?? new Room();
+                    roomMapper.MapFromEntity(item.Room, targetItem.CurrentRoom);
+                }
             }
         }
     }
