@@ -5,6 +5,8 @@ C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAc
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\obj\Debug\MedicalApp.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\obj\Debug\MedicalApp.DataAccess.dll
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\obj\Debug\MedicalApp.DataAccess.pdb
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.DataAccess\obj\Debug\MedicalApp.DataAccess.csprojResolveAssemblyReference.cache

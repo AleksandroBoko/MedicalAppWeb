@@ -9,3 +9,5 @@ C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.Buisne
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\obj\Debug\MedicalApp.BuisnessServices.csprojResolveAssemblyReference.cache
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\obj\Debug\MedicalApp.BuisnessServices.dll
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\obj\Debug\MedicalApp.BuisnessServices.pdb
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
