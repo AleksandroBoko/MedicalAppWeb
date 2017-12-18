@@ -10,7 +10,9 @@ namespace MedicalApp.Domain.Models
     {
         public int Id { get; set; }
         public int DoctorId { get; set; }
+        public string DoctorFullName { get; set; }
         public int PatientId { get; set; }
+        public string PatientFullName { get; set; }
         public System.DateTime StartDate { get; set; }
     }
 }

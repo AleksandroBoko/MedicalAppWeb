@@ -10,21 +10,21 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
 {
     class RoomMapper : IMapper<Room, RoomEntity>
     {
-        public void MapFromEntity(RoomEntity item, Room targetItem)
+        public void MapFromEntity(RoomEntity roomEntity, Room room)
         {
-            if (item != null && targetItem != null)
+            if (roomEntity != null && room != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.Number = item.Number;
+                room.Id = roomEntity.Id;
+                room.Number = roomEntity.Number;
             }
         }
 
-        public void MapToEntity(Room item, RoomEntity targetItem)
+        public void MapToEntity(Room room, RoomEntity roomEntity)
         {
-            if (item != null && targetItem != null)
+            if (room != null && roomEntity != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.Number = item.Number;
+                roomEntity.Id = room.Id;
+                roomEntity.Number = room.Number;
             }
         }
     }

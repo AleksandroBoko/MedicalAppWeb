@@ -1,3 +1,5 @@
+*.dll
+*.pdb
 /.vs
 /MedicalApp/obj
 /MedicalApp/bin

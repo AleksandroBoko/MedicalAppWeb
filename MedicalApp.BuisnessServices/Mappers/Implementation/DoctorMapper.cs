@@ -11,25 +11,25 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
 {
     public class DoctorMapper : IMapper<Doctor, DoctorEntity>
     {
-        public void MapToEntity(Doctor item, DoctorEntity targetItem)
+        public void MapToEntity(Doctor doctor, DoctorEntity doctorEntity)
         {            
-            if (item != null && targetItem != null)
+            if (doctor != null && doctorEntity != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.FirstName = item.FirstName;
-                targetItem.LastName = item.LastName;
-                targetItem.Qualification = item.Qualification;
+                doctorEntity.Id = doctor.Id;
+                doctorEntity.FirstName = doctor.FirstName;
+                doctorEntity.LastName = doctor.LastName;
+                doctorEntity.Qualification = doctor.Qualification;
             }
         }
 
-        public void MapFromEntity(DoctorEntity item, Doctor targetItem)
+        public void MapFromEntity(DoctorEntity doctorEntity, Doctor doctor)
         {
-            if (item != null && targetItem != null)
+            if (doctorEntity != null && doctor != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.FirstName = item.FirstName;
-                targetItem.LastName = item.LastName;
-                targetItem.Qualification = item.Qualification;
+                doctor.Id = doctorEntity.Id;
+                doctor.FirstName = doctorEntity.FirstName;
+                doctor.LastName = doctorEntity.LastName;
+                doctor.Qualification = doctorEntity.Qualification;
             }
         }
     }

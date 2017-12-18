@@ -6,16 +6,7 @@
     <p>@Html.LabelFor(x => x.PatientId, "Patients")</p>
     <p>@Html.DropDownListFor(x => x.PatientId, ViewBag.patients as SelectList)</p>
     <p>@Html.LabelFor(x => x.StartDate)</p>
-    <p>@Html.TextBoxFor(x => x.StartDate, "StartDate")</p>
-
-    @*<p>@Html.LabelFor(x => x.FirstName)</p>
-    
-    <p>@Html.LabelFor(x => x.LastName)</p>
-    <p>@Html.TextBoxFor(x => x.LastName, "Last Name")</p>
-    <p>@Html.LabelFor(x => x.Age)</p>
-    <p>@Html.TextBoxFor(x => x.Age, "Age")</p>
-    <p>@Html.Label("Room")</p>
-    <p>@Html.DropDownListFor(x => x.RoomId, ViewBag.selectList as SelectList)</p>*@
+    <p>@Html.TextBoxFor(x => x.StartDate, "StartDate")</p>    
     <p><input type="submit" value="Send" /></p>
 }
 

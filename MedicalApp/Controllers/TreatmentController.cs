@@ -25,17 +25,12 @@ namespace MedicalApp.Controllers
         // GET: Treatment
         public ActionResult Index()
         {
-            var treatments = treatmentService.GetAll();
-            var doctors = doctorService.GetAll();
-            var patients = patientService.GetAll();
-            
-            ViewBag.doctors = doctors;
-            ViewBag.patients = patients;
+            var treatments = treatmentService.GetAll();            
             return View(treatments);
         }
 
         public ActionResult FormTreatment()
-        {
+        {            
             var doctors = doctorService.GetAll();
             var patients = patientService.GetAll();
 

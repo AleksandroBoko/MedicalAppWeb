@@ -33,18 +33,18 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
             }
         }
 
-        public void MapFromEntity(PatientEntity item, Patient targetItem)
+        public void MapFromEntity(PatientEntity patientEntity, Patient patient)
         {
-            if (item != null && targetItem != null)
+            if (patientEntity != null && patient != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.FirstName = item.FirstName;
-                targetItem.LastName = item.LastName;
-                targetItem.Age = item.Age;
-                if (item.Room != null)
+                patient.Id = patientEntity.Id;
+                patient.FirstName = patientEntity.FirstName;
+                patient.LastName = patientEntity.LastName;
+                patient.Age = patientEntity.Age;
+                if (patientEntity.Room != null)
                 {
-                    targetItem.CurrentRoom = targetItem.CurrentRoom ?? new Room();
-                    roomMapper.MapFromEntity(item.Room, targetItem.CurrentRoom);
+                    patient.CurrentRoom = patient.CurrentRoom ?? new Room();
+                    roomMapper.MapFromEntity(patientEntity.Room, patient.CurrentRoom);
                 }
             }
         }
