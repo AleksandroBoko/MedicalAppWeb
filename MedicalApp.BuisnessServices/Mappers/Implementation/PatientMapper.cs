@@ -17,19 +17,19 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
 
         private readonly RoomMapper roomMapper;
 
-        public void MapToEntity(Patient item, PatientEntity targetItem)
+        public void MapToEntity(Patient patient, PatientEntity patientEntity)
         {
-            if (item != null && targetItem != null)
+            if (patient != null && patientEntity != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.FirstName = item.FirstName;
-                targetItem.LastName = item.LastName;
-                targetItem.Age = item.Age;
-                if(item.Room != null)
+                patientEntity.Id = patient.Id;
+                patientEntity.FirstName = patient.FirstName;
+                patientEntity.LastName = patient.LastName;
+                patientEntity.Age = patient.Age;
+                if(patient.CurrentRoom != null)
                 {
-                    targetItem.RoomId = item.Room.Id;
+                    patientEntity.RoomId = patient.CurrentRoom.Id;
                 }                
-                roomMapper.MapToEntity(item.Room, targetItem.Room);
+                roomMapper.MapToEntity(patient.CurrentRoom, patientEntity.Room);
             }
         }
 
@@ -41,14 +41,10 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
                 targetItem.FirstName = item.FirstName;
                 targetItem.LastName = item.LastName;
                 targetItem.Age = item.Age;
-                //targetItem.RoomId = item.RoomId;
                 if (item.Room != null)
                 {
-                    if(targetItem.Room == null)
-                    {
-                        targetItem.Room = new Room();
-                    }
-                    roomMapper.MapFromEntity(item.Room, targetItem.Room);
+                    targetItem.CurrentRoom = targetItem.CurrentRoom ?? new Room();
+                    roomMapper.MapFromEntity(item.Room, targetItem.CurrentRoom);
                 }
             }
         }
