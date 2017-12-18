@@ -1,11 +1,11 @@
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.BuisnessServices.dll
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.BuisnessServices.pdb
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.DataAccess.dll
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.Domain.dll
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\EntityFramework.dll
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.DataAccess.pdb
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.Domain.pdb
+C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\EntityFramework.xml
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\obj\Debug\MedicalApp.BuisnessServices.csprojResolveAssemblyReference.cache
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\obj\Debug\MedicalApp.BuisnessServices.dll
 C:\Users\user\documents\visual studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\obj\Debug\MedicalApp.BuisnessServices.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.DataAccess.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.Domain.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\EntityFramework.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.DataAccess.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\MedicalApp.Domain.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\MedicalApp\MedicalApp.BuisnessServices\bin\Debug\EntityFramework.xml

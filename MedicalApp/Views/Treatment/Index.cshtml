@@ -1,24 +1,6 @@
 ﻿@using MedicalApp.Domain.Models
 @model IList<Treatment>
 
-@helper GetDoctorFullName(IList<Doctor> items, int id)
-{
-    var item = items.FirstOrDefault(x => x.Id == id);
-    if(item != null)
-    {
-        <td>@item.FirstName @item.LastName</td>
-    }
-}
-
-@helper GetPatientFullName(IList<Patient> items, int id)
-{
-    var item = items.FirstOrDefault(x => x.Id == id);
-    if (item != null)
-    {
-        <td>@item.FirstName @item.LastName</td>
-    }
-}
-
 <table border="1">
     <caption>
         Treatments
@@ -33,8 +15,8 @@
     {
         <tr>
             <td>@treatment.Id</td>
-            @GetDoctorFullName(ViewBag.doctors, treatment.DoctorId)
-            @GetPatientFullName(ViewBag.patients, treatment.PatientId)
+            <td>@treatment.DoctorFullName</td>
+            <td>@treatment.PatientFullName</td>
             <td>@treatment.StartDate</td>
         </tr>
     }

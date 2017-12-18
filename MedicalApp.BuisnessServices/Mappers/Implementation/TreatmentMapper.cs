@@ -10,25 +10,27 @@ namespace MedicalApp.BuisnessServices.Mappers.Implementation
 {
     class TreatmentMapper : IMapper<Treatment, TreatmentEntity>
     {
-        public void MapFromEntity(TreatmentEntity item, Treatment targetItem)
+        public void MapFromEntity(TreatmentEntity treatmentEntity, Treatment treatment)
         {
-            if (item != null && targetItem != null)
+            if (treatmentEntity != null && treatment != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.DoctorId = item.DoctorId;
-                targetItem.PatientId = item.PatientId;
-                targetItem.StartDate = item.StartDate;
+                treatment.Id = treatmentEntity.Id;
+                treatment.DoctorId = treatmentEntity.DoctorId;
+                treatment.DoctorFullName = $"{treatmentEntity.Doctor.FirstName} {treatmentEntity.Doctor.LastName}";
+                treatment.PatientId = treatmentEntity.PatientId;
+                treatment.PatientFullName = $"{treatmentEntity.Patient.FirstName} {treatmentEntity.Patient.LastName}";
+                treatment.StartDate = treatmentEntity.StartDate;
             }
         }
 
-        public void MapToEntity(Treatment item, TreatmentEntity targetItem)
+        public void MapToEntity(Treatment treatment, TreatmentEntity treatmentEntity)
         {
-            if (item != null && targetItem != null)
+            if (treatment != null && treatmentEntity != null)
             {
-                targetItem.Id = item.Id;
-                targetItem.DoctorId = item.DoctorId;
-                targetItem.PatientId = item.PatientId;
-                targetItem.StartDate = item.StartDate;
+                treatmentEntity.Id = treatment.Id;
+                treatmentEntity.DoctorId = treatment.DoctorId;
+                treatmentEntity.PatientId = treatment.PatientId;
+                treatmentEntity.StartDate = treatment.StartDate;
             }
         }
     }
