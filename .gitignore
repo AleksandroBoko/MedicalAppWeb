@@ -1,9 +1,3 @@
 /.vs
 /MedicalApp/obj
 /MedicalApp/bin
-/MedicalApp.BuisnessServices/obj
-/MedicalApp.BuisnessServices/bin
-/MedicalApp.DataAccess/obj
-/MedicalApp.DataAccess/bin
-/MedicalApp.Domain/obj
-/MedicalApp.Domain/bin
